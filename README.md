@@ -44,7 +44,7 @@ You can reduce your final image size by removing them at the end of your own bui
 RUN apt-get remove --purge -y \
     wget \
     libswitch-perl \
-    && apt-get autoremove --purge
+    && apt-get autoremove --purge -y
 ```
 
 ### Alpine-based
