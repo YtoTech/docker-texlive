@@ -1,6 +1,4 @@
 # TODO Create variation with different based images:
-# * 2 last Debian distributions
-# * 2 last Ubuntu distributions
 # * try an Alpline based image
 FROM debian:buster
 LABEL maintainer="Yoan Tournade <yoan@ytotech.com>"
@@ -9,11 +7,9 @@ LABEL maintainer="Yoan Tournade <yoan@ytotech.com>"
 
 # Based on :
 # - https://www.tug.org/texlive/quickinstall.html
-# - https://github.com/camilstaps/docker-texlive/blob/master/Dockerfile
 # - https://tex.stackexchange.com/questions/1092/how-to-install-vanilla-texlive-on-debian-or-ubuntu
 
 # install-tl dependencies.
-# TODO remove/purge them at the end of installation?
 RUN apt-get update -qq && apt-get install -y \
     wget \
     libswitch-perl
@@ -26,19 +22,13 @@ RUN cd /tmp && wget -qO- http://mirror.ctan.org/systems/texlive/tlnet/install-tl
 # Cleanup
 # Remove installer.
 RUN rm -rf /tmp/install-tl-*
+# Remove install-tl dependencies.
+RUN apt-get remove --purge -y \
+    wget \
+    libswitch-perl \
+    && apt-get autoremove --purge
 # Clean APT cache.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Add Texlive binaries to path.
 ENV PATH="/usr/local/texlive/bin/x86_64-linux:${PATH}"
-
-# # TODO Variation: another branch/tag.
-# # Install fonts.
-# COPY ./container/install_fonts.sh /tmp/
-# RUN /tmp/install_fonts.sh
-
-# # TODO Variation: another branch/tag.
-# # Install Latext packages.
-# # TODO Takes a list of packages.
-# COPY ./container/install_latex_packages.sh /tmp/
-# RUN /tmp/install_latex_packages.sh

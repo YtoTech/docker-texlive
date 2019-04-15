@@ -8,13 +8,12 @@ This image is used as a based for powering [Latex on HTTP](https://github.com/Yt
 
 The `scheme-full` is used. See [texlive.profile](texlive.profile) for the configuration used.
 
-## Usage Example
+## Usage example
 
-Based on this image, you can install [CTAN packages](https://ctan.org/) using `tlmgr`.
+Based on this image, you can then install [CTAN packages](https://ctan.org/) using `tlmgr`.
 
-`Dockerfile`
-```
-FROM debian:buster yoant/texlive
+```Dockerfile
+FROM yoant/texlive
 
 tlmgr install babel-spanish
 ```
@@ -24,6 +23,7 @@ tlmgr install babel-spanish
 * create variations, using tags
   * base version of Debian
   * scheme used
+  * TexLive distribution used
 
 ## Credits & Contributions
 
