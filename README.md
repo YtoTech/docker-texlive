@@ -50,7 +50,7 @@ RUN apt-get remove --purge -y \
 ### Alpine-based
 
 ```Dockerfile
-RUN apk perl wget tar xz
+RUN apk del perl wget tar xz
 ```
 
 --------------------------------

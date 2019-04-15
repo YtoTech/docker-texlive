@@ -20,7 +20,7 @@ RUN cd /tmp && wget -qO- http://mirror.ctan.org/systems/texlive/tlnet/install-tl
 RUN rm -rf /tmp/install-tl-*
 # TODO Make an alternative version which
 # remove install-tl dependencies.
-# RUN apk perl wget tar xz
+# RUN apk del perl wget tar xz
 
 # Add Texlive binaries to path.
 ENV PATH="/usr/local/texlive/bin/x86_64-linux:${PATH}"
