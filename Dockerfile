@@ -18,16 +18,17 @@ RUN cd /tmp && wget -qO- http://mirror.ctan.org/systems/texlive/tlnet/install-tl
     && /tmp/install-tl*/install-tl -profile /tmp/texlive.profile
 
 # Cleanup
-# Remove installer.
-RUN rm -rf /tmp/install-tl-*
-# TODO Make a version without tlmgr depencencies included?
-# Remove install-tl dependencies.
-# RUN apt-get remove --purge -y \
-#     wget \
-#     libswitch-perl \
-#     && apt-get autoremove --purge
-# Clean APT cache.
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN \
+    # Remove installer.
+    rm -rf /tmp/install-tl-* \
+    # TODO Make a version without tlmgr depencencies included?
+    # Remove install-tl dependencies.
+    # apt-get remove --purge -y \
+    #     wget \
+    #     libswitch-perl \
+    #     && apt-get autoremove --purge \
+    # Clean APT cache.
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Add Texlive binaries to path.
 ENV PATH="/usr/local/texlive/bin/x86_64-linux:${PATH}"
