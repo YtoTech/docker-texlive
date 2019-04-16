@@ -1,7 +1,7 @@
 # (Yet another) Texlive Docker image
 
-[![](https://images.microbadger.com/badges/version/yoant/docker-texlive.svg)](https://hub.docker.com/r/yoant/docker-texlive)
-[![](https://images.microbadger.com/badges/image/yoant/docker-texlive.svg)](https://microbadger.com/images/yoant/docker-texlive "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/yoant/docker-texlive:debian.svg)](https://hub.docker.com/r/yoant/docker-texlive)
+[![](https://images.microbadger.com/badges/image/yoant/docker-texlive:debian.svg)](https://microbadger.com/images/yoant/docker-texlive "Get your own image badge on microbadger.com")
 
 [![](https://images.microbadger.com/badges/version/yoant/docker-texlive:alpine.svg)](https://hub.docker.com/r/yoant/docker-texlive)
 [![](https://images.microbadger.com/badges/image/yoant/docker-texlive:alpine.svg)](https://microbadger.com/images/yoant/docker-texlive "Get your own image badge on microbadger.com")
