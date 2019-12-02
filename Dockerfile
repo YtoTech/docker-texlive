@@ -12,7 +12,7 @@ LABEL maintainer="Yoan Tournade <yoan@ytotech.com>"
 RUN apt-get update -qq && apt-get install -y \
     wget \
     libswitch-perl \
-    gnugpg
+    gnupg
 
 # TODO Make textlive.profile a template, so we can configure the installation path.
 COPY ./texlive.profile /tmp/
