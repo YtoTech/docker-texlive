@@ -34,7 +34,7 @@ tlmgr install babel-spanish
 
 ## Reduce image final size
 
-We choose to include `tlmgr` dependencies (perl and wget) in the image,
+We choose to include `tlmgr` dependencies (perl and wget, also GPG) in the image,
 so we can install CTAN packages right away.
 You can reduce your final image size by removing them at the end of your own build:
 

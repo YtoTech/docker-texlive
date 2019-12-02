@@ -8,7 +8,8 @@ LABEL maintainer="Yoan Tournade <yoan@ytotech.com>"
 # - https://github.com/dc-uba/docker-alpine-texlive
 
 # install-tl dependencies.
-RUN apk add --no-cache perl wget tar xz
+# GPG is for tlmgr installation source verifications.
+RUN apk add --no-cache perl wget tar xz gnupg
 
 # TODO Make textlive.profile a template, so we can configure the installation path.
 COPY ./texlive.profile /tmp/

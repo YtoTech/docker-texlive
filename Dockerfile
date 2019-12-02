@@ -8,9 +8,11 @@ LABEL maintainer="Yoan Tournade <yoan@ytotech.com>"
 # - https://tex.stackexchange.com/questions/1092/how-to-install-vanilla-texlive-on-debian-or-ubuntu
 
 # install-tl dependencies.
+# GPG is for tlmgr installation source verifications.
 RUN apt-get update -qq && apt-get install -y \
     wget \
-    libswitch-perl
+    libswitch-perl \
+    gnugpg
 
 # TODO Make textlive.profile a template, so we can configure the installation path.
 COPY ./texlive.profile /tmp/
