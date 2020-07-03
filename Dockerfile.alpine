@@ -13,15 +13,15 @@ RUN apk add --no-cache perl wget tar xz
 # TODO Make textlive.profile a template, so we can configure the installation path.
 COPY ./texlive.profile /tmp/
 RUN cd /tmp && wget -qO- http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz | tar xz \
-    && /tmp/install-tl*/install-tl -profile /tmp/texlive.profile
+    && /tmp/install-tl*/install-tl -profile /tmp/texlive.profile \
+    && rm -rf /tmp/install-tl-*
 
 # Cleanup
-RUN \
-    # Remove installer.
-    rm -rf /tmp/install-tl-*
-    # TODO Make an alternative version which
-    # remove install-tl dependencies.
-    # RUN apk del perl wget tar xz
+# remove install-tl dependencies.
+# RUN apk del perl wget tar xz
+# But requires to be done all in one RUN/layer?
+# Or use multistage?
+# https://docs.docker.com/develop/develop-images/multistage-build/
 
 # Add Texlive binaries to path.
 ENV PATH="/usr/local/texlive/bin/x86_64-linux:${PATH}"
