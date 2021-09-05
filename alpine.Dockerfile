@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.14
 LABEL maintainer="Yoan Tournade <yoan@ytotech.com>"
 
 # Install Texlive: latest release.
