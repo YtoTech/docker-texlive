@@ -1,4 +1,4 @@
-FROM debian:bookworm
+FROM debian:bookworm-20250203
 LABEL maintainer="Yoan Tournade <yoan@ytotech.com>"
 
 # Install Texlive: latest release.
