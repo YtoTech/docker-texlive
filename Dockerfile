@@ -31,4 +31,4 @@ RUN cd /tmp && wget -qO- https://mirror.ctan.org/systems/texlive/tlnet/install-t
     
 
 # Add Texlive binaries to path.
-ENV PATH="/usr/local/texlive/bin/x86_64-linux:${PATH}"
+ENV PATH "/usr/local/texlive/bin/x86_64-linux:${PATH}"
