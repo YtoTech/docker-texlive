@@ -6,7 +6,7 @@
 [![](https://images.microbadger.com/badges/version/yoant/docker-texlive:alpine.svg)](https://hub.docker.com/r/yoant/docker-texlive)
 [![](https://images.microbadger.com/badges/image/yoant/docker-texlive:alpine.svg)](https://microbadger.com/images/yoant/docker-texlive "Get your own image badge on microbadger.com")
 
-A [Docker image](https://hub.docker.com/r/yoant/docker-texlive) based on Debian (Trixie) or Alpine (3.21) with the latest vanilla [Texlive](https://www.tug.org/texlive/quickinstall.html) distribution (2024).
+A [Docker image](https://hub.docker.com/r/yoant/docker-texlive) based on Debian (Trixie) or Alpine (3.22) with the latest vanilla [Texlive](https://www.tug.org/texlive/quickinstall.html) distribution (2025).
 
 This image is used as a based for powering [Latex on HTTP](https://github.com/YtoTech/latex-on-http).
 

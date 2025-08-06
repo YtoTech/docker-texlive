@@ -1,4 +1,4 @@
-FROM debian:trixie-20250224
+FROM debian:trixie-20250721
 LABEL maintainer="Yoan Tournade <yoan@ytotech.com>"
 
 # Install Texlive: latest release.
