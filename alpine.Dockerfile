@@ -1,4 +1,4 @@
-FROM alpine:3.22
+FROM alpine:3.23
 LABEL maintainer="Yoan Tournade <yoan@ytotech.com>"
 
 # Install Texlive: latest release.
@@ -25,4 +25,4 @@ RUN cd /tmp && wget -qO- https://mirror.ctan.org/systems/texlive/tlnet/install-t
 # https://docs.docker.com/develop/develop-images/multistage-build/
 
 # Add Texlive binaries to path.
-ENV PATH "/usr/local/texlive/bin/x86_64-linux:${PATH}"
+ENV PATH="/usr/local/texlive/bin/x86_64-linux:${PATH}"
